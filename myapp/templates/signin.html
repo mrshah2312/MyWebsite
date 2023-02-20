@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MrShah2312-Sign In</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+      <h3>Sign in here</h3>
+      <form action="Signin" method="post">
+        {% csrf_token %}
+          <div class="inputBox">
+            <input id="email" type="email" name="email" placeholder="Email" required>
+            <input id="password" type="password" name="password" placeholder="Password" required>
+          </div>
+          <input type="submit" name="" value="Sign In">
+      </form> 
+      <a href="">Forget Password</a><br>
+      <a href="{% url 'signup_page' %}">Sign Up</a>
+  </div>
+  </body>
+</html>
